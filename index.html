@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="vi"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Trần Thị Cẩm Tiên - Giới thiệu</title> 
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style> 
+        /* Tên font chữ được đổi lại để tương thích tốt hơn với hầu hết các hệ thống */
+        body { 
+            font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: #0e172a; 
+            color: #e2e8f0; 
+        } 
+        .glass { 
+            background: rgba(15, 23, 42, 0.4); 
+            border: 1px solid rgba(226, 232, 240, 0.08); 
+            box-shadow: 0 20px 40px rgba(15, 23, 42, 0.5); 
+            backdrop-filter: blur(16px); 
+        } 
+        .accent-gradient { 
+            background: linear-gradient(135deg, #7c3aed, #ec4899); 
+        } 
+        .floating { 
+            animation: float 8s ease-in-out infinite; 
+        } 
+        @keyframes float { 
+            0%, 100% { transform: translateY(0px); } 
+            50% { transform: translateY(-15px); } 
+        } 
+        .timeline::before { 
+            content: ""; 
+            position: absolute; 
+            left: 50%; 
+            top: 0; 
+            bottom: 0; 
+            width: 2px; 
+            background: rgba(226, 232, 240, 0.3); 
+        } 
+        /* Cải tiến: Thêm dấu chấm thời gian cho Timeline */
+        .timeline .relative:before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 10px;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background-color: #ec4899;
+            z-index: 10;
+            transform: translateX(-50%);
+        }
+        @media (max-width: 1024px) { 
+            .timeline::before { left: 5px; } 
+            .timeline .relative:before { left: 5px; transform: translateX(0); }
+            .timeline .relative > div:first-child { 
+                padding-right: 0 !important; 
+                text-align: left !important;
+                border-left: 2px solid transparent;
+                margin-left: 20px;
+            }
+            .timeline .relative > div:last-child { 
+                padding-left: 20px !important; 
+            }
+            .timeline .relative {
+                padding-left: 20px;
+            }
+        } 
+    </style> 
+</head> 
+<body class="min-h-screen"> 
+    <div class="relative overflow-hidden"> 
+        <div class="absolute inset-0 opacity-60"> 
+            <div class="absolute top-10 left-1/4 w-72 h-72 rounded-full blur-3xl accent-gradient"></div> 
+            <div class="absolute bottom-10 right-1/5 w-80 h-80 rounded-full blur-3xl" style="background: linear-gradient(135deg,#22d3ee,#14b8a6);"></div> 
+        </div>
+
+        <header class="relative z-10 max-w-6xl mx-auto px-6 pt-16 pb-10 flex flex-col gap-10 lg:flex-row lg:items-center">  
+            <div class="flex-1 space-y-6">    
+                <p class="text-pink-300 uppercase tracking-[0.4em] text-sm">FOODTECH EXPERT</p>    
+                <h1 class="text-4xl lg:text-5xl font-semibold text-white leading-tight">      
+                    Thạc sĩ Trần Thị Cẩm Tiên<br>      
+                    <span class="text-sky-300">Chuyên gia Công nghệ Thực phẩm</span>    
+                </h1>    
+                <p class="text-lg text-slate-200 max-w-2xl">      
+                    Với kinh nghiệm nghiên cứu và phát triển sản phẩm công nghệ thực phẩm (từ 2018-2025), **Trần Thị Cẩm Tiên** tập trung vào giải pháp nâng cao giá trị nông sản Việt, tối ưu hoá quy trình chế biến và đảm bảo dinh dưỡng bền vững cho cộng đồng.    
+                </p>    
+                <div class="flex flex-wrap gap-4">      
+                    <a href="#lien-he" class="px-6 py-3 bg-pink-500 hover:bg-pink-400 rounded-full font-semibold text-sm uppercase tracking-wider transition">Kết nối hợp tác</a>      
+                    <a href="#nghien-cuu" class="px-6 py-3 border border-white/30 rounded-full font-semibold text-sm uppercase tracking-wider hover:bg-white/10 transition">Xem dự án nổi bật</a>    
+                </div>  
+            </div>  
+            <div class="flex-1 flex justify-center">    
+                <div class="glass rounded-3xl p-6 w-full max-w-sm floating">      
+                    <div class="rounded-2xl h-64 overflow-hidden mb-6">        
+                        
+                    </div>      
+                    <div class="space-y-3">        
+                        <div class="flex justify-between text-sm text-slate-300"><span>Chuyên ngành</span><span>Công nghệ Thực phẩm (Đại học & Cao học)</span></div>        
+                        <div class="flex justify-between text-sm text-slate-300"><span>Kinh nghiệm</span><span>5+ năm (Kể từ Tốt nghiệp Đại học 2022)</span></div>        
+                        <div class="flex justify-between text-sm text-slate-300"><span>Kỹ năng nổi bật</span><span>R&D, QA, Tin học văn phòng</span></div>        
+                        <div class="flex justify-between text-sm text-slate-300"><span>Trình độ Tiếng Anh</span><span>VSTEP B2</span></div>      
+                    </div>    
+                </div>  
+            </div>
+        </header>
+
+        <main class="relative z-10 max-w-6xl mx-auto px-6 space-y-16 pb-20">  
+            <section id="gioi-thieu" class="glass rounded-3xl p-8 space-y-6">    
+                <h2 class="text-2xl font-semibold text-white">Tầm nhìn và mục tiêu</h2>    
+                <p class="text-slate-200 leading-relaxed">      
+                    **Mục tiêu ngắn hạn:** Nỗ lực hoàn thành tốt mọi nhiệm vụ, tiếp nhận và kiểm tra mẫu đúng quy trình, ghi chép chính xác thông tin. **Mục tiêu dài hạn:** Không ngừng đóng góp cho sự phát triển chung của doanh nghiệp.  
+                </p>    
+                <div class="grid md:grid-cols-3 gap-6">      
+                    <div class="p-5 rounded-2xl border border-white/10 bg-white/5">        
+                        <p class="text-sm text-slate-300 uppercase tracking-widest">Kỹ năng</p>        
+                        <h3 class="mt-2 text-xl font-semibold text-white">Chuyên môn</h3>        
+                        <p class="text-slate-300 text-sm mt-3">Tin học văn phòng, Giao tiếp, Thuyết trình, Tiếng Anh.</p>      
+                    </div>      
+                    <div class="p-5 rounded-2xl border border-white/10 bg-white/5">        
+                        <p class="text-sm text-slate-300 uppercase tracking-widest">Học vấn</p>        
+                        <h3 class="mt-2 text-xl font-semibold text-white">Tốt nghiệp Xuất sắc/Giỏi</h3>        
+                        <p class="text-slate-300 text-sm mt-3">Đạt xếp loại Giỏi Đại học (2018-2022) và Xuất sắc Cao học (2022-2024) tại Trường Đại học Cần Thơ.</p>      
+                    </div>      
+                    <div class="p-5 rounded-2xl border border-white/10 bg-white/5">        
+                        <p class="text-sm text-slate-300 uppercase tracking-widest">Sở thích</p>        
+                        <h3 class="mt-2 text-xl font-semibold text-white">Nghiên cứu & Cộng đồng</h3>        
+                        <p class="text-slate-300 text-sm mt-3">Đọc sách về dinh dưỡng người, sách thực phẩm và tham gia làm tình nguyện.</p>      
+                    </div>    
+                </div>  
+            </section>  
+            <section class="glass rounded-3xl p-8 space-y-6">    
+                <div class="flex items-center gap-4">      
+                    <span class="w-12 h-1 rounded-full bg-emerald-400"></span>      
+                    <h2 class="text-2xl font-semibold text-white">Kinh nghiệm làm việc tiêu biểu</h2>    
+                </div>    
+                <p class="text-slate-300 text-sm">Các vai trò chính bao gồm phát triển sản phẩm, quản lý chất lượng và hỗ trợ giảng dạy.</p>    
+                <div class="grid md:grid-cols-2 gap-5">      
+                    <div class="rounded-2xl overflow-hidden border border-white/10 p-4 bg-white/5">        
+                        <p class="text-sm text-pink-300">2022 - 2023</p>
+                        <h3 class="text-lg font-semibold text-white mt-1">Nhân viên KCS phòng Công nghệ</h3>
+                        <p class="text-slate-300 text-sm italic">Công ty CP Phân bón và Hoá chất Cần Thơ</p>
+                        <ul class="text-slate-200 text-sm list-disc ml-5 mt-2 space-y-1">
+                            <li>Phát triển sản phẩm mới và nghiên cứu ứng dụng công nghệ.</li>
+                            <li>Phân tích, lựa chọn, quyết định nguyên liệu đầu vào và giám sát, đánh giá chất lượng thành phẩm.</li>
+                            <li>Xây dựng quy chuẩn đánh giá chất lượng đầu vào.</li>
+                        </ul>
+                    </div>      
+                    <div class="rounded-2xl overflow-hidden border border-white/10 p-4 bg-white/5">        
+                        <p class="text-sm text-pink-300">2023 - 2025</p>
+                        <h3 class="text-lg font-semibold text-white mt-1">Hỗ trợ giảng tại phòng thí nghiệm</h3>
+                        <p class="text-slate-300 text-sm italic">Trường Đại học Cần Thơ</p>
+                        <ul class="text-slate-200 text-sm list-disc ml-5 mt-2 space-y-1">
+                            <li>Hỗ trợ giảng viên trong việc tổ chức, chuẩn bị và triển khai các buổi thực hành (Chi tiết không có trong nguồn).</li>
+                            <li>Tham gia các hoạt động cộng đồng như dự án "Mùa hè xanh" và CLB Tiếng Anh.</li>
+                        </ul>
+                    </div>    
+                </div>  
+            </section>  
+
+            <section id="nghien-cuu" class="space-y-8">
+                <div class="flex items-center gap-4">      
+                    <span class="w-12 h-1 rounded-full bg-pink-400"></span>      
+                    <h2 class="text-2xl font-semibold text-white">Dự án & Nghiên cứu nổi bật</h2>    
+                </div>    
+                <p class="text-slate-300 text-sm">Các nội dung dưới đây là ví dụ, bạn có thể thay bằng các nghiên cứu thực tế về **đặc điểm lạnh đông** hoặc **phân tích thành phần chính** về quả nhãn (nếu có)</p>
+                <div class="grid lg:grid-cols-3 gap-6">      
+                    <article class="glass rounded-3xl p-6 space-y-3">        
+                        <p class="text-sm text-pink-300 uppercase tracking-widest">2023 (Ví dụ)</p>        
+                        <h3 class="text-xl font-semibold text-white">Nền tảng chuyển đổi số nhà máy chế biến trái cây</h3>        
+                        <p class="text-slate-300 text-sm">Thiết kế mô hình giám sát thời gian thực giúp giảm 18% năng lượng và tối ưu an toàn thực phẩm.</p>        
+                        <ul class="text-slate-200 text-sm list-disc ml-5 space-y-1">          
+                            <li>Tích hợp cảm biến IoT - blockchain truy xuất</li>          
+                            <li>Dashboard phân tích dữ liệu cho quản lý</li>        
+                        </ul>      
+                    </article>      
+                    <article class="glass rounded-3xl p-6 space-y-3">        
+                        <p class="text-sm text-pink-300 uppercase tracking-widest">Giải thưởng</p>        
+                        <h3 class="text-xl font-semibold text-white">Thành tích học tập & hoạt động Đoàn</h3>        
+                        <p class="text-slate-300 text-sm">Đạt Học bổng khuyến khích học tập và Giấy khen sinh viên có thành tích xuất sắc trong công tác Đoàn.</p>        
+                        <ul class="text-slate-200 text-sm list-disc ml-5 space-y-1">          
+                            <li>VSTEP B2 và Tin học ứng dụng.</li>          
+                        </ul>      
+                    </article>      
+                    <article class="glass rounded-3xl p-6 space-y-3">        
+                        <p class="text-sm text-pink-300 uppercase tracking-widest">2019 (Ví dụ)</p>        
+                        <h3 class="text-xl font-semibold text-white">Nghiên cứu protein thực vật cho thực phẩm thay thế</h3>        
+                        <p class="text-slate-300 text-sm">Tập trung vào nguồn đạm từ đậu nành, đậu xanh, hạt điều, tạo nền tảng sản phẩm thuần chay giàu dinh dưỡng.</p>        
+                        <ul class="text-slate-200 text-sm list-disc ml-5 space-y-1">          
+                            <li>Xây dựng thư viện dữ liệu cảm quan</li>          
+                            <li>Kết nối startup thực phẩm xanh</li>        
+                        </ul>      
+                    </article>    
+                </div>  
+            </section>  
+            <section class="grid lg:grid-cols-2 gap-6">    
+                <div class="glass rounded-3xl p-8 space-y-6">      
+                    <h2 class="text-2xl font-semibold text-white">Kỹ năng chuyên môn</h2>      
+                    <div class="space-y-4">        
+                        <div><div class="flex justify-between text-sm text-slate-300"><span>Phát triển sản phẩm (R&D)</span><span>95%</span></div><div class="w-full h-2 bg-white/10 rounded-full mt-2"><div class="h-full rounded-full accent-gradient" style="width:95%"></div></div></div>        
+                        <div><div class="flex justify-between text-sm text-slate-300"><span>Quản lý chất lượng & HACCP</span><span>92%</span></div><div class="w-full h-2 bg-white/10 rounded-full mt-2"><div class="h-full rounded-full" style="width:92%;background:linear-gradient(135deg,#06b6d4,#3b82f6);"></div></div></div>        
+                        <div><div class="flex justify-between text-sm text-slate-300"><span>Phân tích cảm quan & dinh dưỡng</span><span>88%</span></div><div class="w-full h-2 bg-white/10 rounded-full mt-2"><div class="h-full rounded-full" style="width:88%;background:linear-gradient(135deg,#f97316,#ef4444);"></div></div></div>        
+                        <div><div class="flex justify-between text-sm text-slate-300"><span>Tư vấn chiến lược chuỗi cung ứng</span><span>85%</span></div><div class="w-full h-2 bg-white/10 rounded-full mt-2"><div class="h-full rounded-full" style="width:85%;background:linear-gradient(135deg,#22d3ee,#14b8a6);"></div></div></div>      
+                    </div>    
+                </div>    
+                <div class="glass rounded-3xl p-8 space-y-6">      
+                    <h2 class="text-2xl font-semibold text-white">Học vấn & Bằng cấp</h2>      
+                    <ul class="space-y-4 text-slate-200">        
+                        <li class="flex items-start gap-4">          
+                            <span class="text-3xl text-pink-400">🎓</span>          
+                            <div>            
+                                <p class="font-semibold">Cao học Công nghệ Thực phẩm (Xuất sắc)</p>            
+                                <p class="text-sm text-slate-400">Trường Đại học Cần Thơ (2022-2024)</p>          
+                            </div>        
+                        </li>        
+                        <li class="flex items-start gap-4">          
+                            <span class="text-3xl text-pink-400">🎓</span>          
+                            <div>            
+                                <p class="font-semibold">Kỹ sư Công nghệ Thực phẩm (Giỏi)</p>            
+                                <p class="text-sm text-slate-400">Trường Đại học Cần Thơ (2018-2022)</p>          
+                            </div>        
+                        </li>        
+                        <li class="flex items-start gap-4">          
+                            <span class="text-3xl text-pink-400">📜</span>          
+                            <div>            
+                                <p class="font-semibold">Chứng chỉ VSTEP B2 / Tin học ứng dụng</p>            
+                                <p class="text-sm text-slate-400">Đáp ứng yêu cầu về Ngoại ngữ và Tin học ứng dụng.</p>          
+                            </div>        
+                        </li>      
+                    </ul>    
+                </div>  
+            </section>  
+            <section class="relative glass rounded-3xl p-8">    
+                <div class="flex items-center gap-4 mb-8">      
+                    <span class="w-12 h-1 rounded-full bg-sky-400"></span>      
+                    <h2 class="text-2xl font-semibold text-white">Hành trình nghề nghiệp (Tóm tắt)</h2>    
+                </div>    
+                <div class="timeline relative">      
+                    <div class="space-y-10">        
+                        <div class="relative lg:flex gap-10">
+                            <div class="lg:w-1/2 text-right pr-0 lg:pr-12">
+                                <p class="text-sm text-slate-400">2022 - 2023</p>
+                                <h3 class="text-lg font-semibold text-white">Nhân viên KCS phòng Công nghệ</h3>
+                                <p class="text-slate-300 text-sm">Công ty CP Phân bón và Hoá chất Cần Thơ. Phát triển sản phẩm và quản lý chất lượng nguyên liệu đầu vào/thành phẩm.</p>
+                            </div>
+                            <div class="hidden lg:block w-1/12"></div>
+                            <div class="lg:w-1/2 text-left pl-0 lg:pl-12"></div>
+                        </div>
+                        <div class="relative lg:flex gap-10">          
+                            <div class="lg:w-1/2 text-right pr-0 lg:pr-12"></div>          
+                            <div class="hidden lg:block w-1/12"></div>          
+                            <div class="lg:w-1/2 text-left pl-0 lg:pl-12">            
+                                <p class="text-sm text-slate-400">2023 - 2025</p>            
+                                <h3 class="text-lg font-semibold text-white">Hỗ trợ giảng tại Phòng thí nghiệm</h3>            
+                                <p class="text-slate-300 text-sm">Trường Đại học Cần Thơ. Hỗ trợ giảng viên và sinh viên trong các buổi thực hành.</p>          
+                            </div>        
+                        </div>
+                        <div class="relative lg:flex gap-10">          
+                            <div class="lg:w-1/2 text-right pr-0 lg:pr-12">
+                                <p class="text-sm text-slate-400">2018 - 2022</p>
+                                <h3 class="text-lg font-semibold text-white">Học tập Đại học</h3>
+                                <p class="text-slate-300 text-sm">Trường Đại học Cần Thơ. Chuyên ngành Công nghệ Thực phẩm. Xếp loại Giỏi.</p>
+                            </div>
+                            <div class="hidden lg:block w-1/12"></div>
+                            <div class="lg:w-1/2 text-left pl-0 lg:pl-12"></div>
+                        </div>
+                    </div>    
+                </div>  
+            </section>  
+            <section class="grid lg:grid-cols-3 gap-6">    
+                <div class="glass rounded-3xl p-7 space-y-4">      
+                    <p class="text-sm text-slate-300 uppercase tracking-widest">Sở thích</p>      
+                    <h3 class="text-xl font-semibold text-white">Nghiên cứu & Tình nguyện</h3>      
+                    <p class="text-slate-300 text-sm">Đọc sách về dinh dưỡng người, sách thực phẩm và làm tình nguyện.</p>      
+                    <button class="px-4 py-2 rounded-full border border-white/20 text-sm uppercase tracking-wide hover:bg-white/10 transition">Tìm hiểu thêm</button>    
+                </div>    
+                <div class="glass rounded-3xl p-7 space-y-4">      
+                    <p class="text-sm text-slate-300 uppercase tracking-widest">Hoạt động</p>      
+                    <h3 class="text-xl font-semibold text-white">Cộng đồng & Ngoại ngữ</h3>      
+                    <p class="text-slate-300 text-sm">Tham gia dự án "Mùa hè xanh" và các câu lạc bộ ngoại ngữ để rèn luyện kỹ năng mềm.</p>      
+                    <button class="px-4 py-2 rounded-full border border-white/20 text-sm uppercase tracking-wide hover:bg-white/10 transition">Xem chi tiết</button>    
+                </div>    
+                <div class="glass rounded-3xl p-7 space-y-4">      
+                    <p class="text-sm text-slate-300 uppercase tracking-widest">Thông tin liên hệ</p>      
+                    <h3 class="text-xl font-semibold text-white">Khu vực Cần Thơ</h3>      
+                    <p class="text-slate-300 text-sm">Địa chỉ: Ninh Kiều, TP Cần Thơ. Điện thoại: 0376321433. Email: trancamtien332000@gmail.com..</p>      
+                    <button class="px-4 py-2 rounded-full border border-white/20 text-sm uppercase tracking-wide hover:bg-white/10 transition">Trao đổi trực tiếp</button>    
+                </div>  
+            </section>  
+            <section id="lien-he" class="glass rounded-3xl p-8 grid lg:grid-cols-2 gap-8 items-center">    
+                <div class="space-y-6">      
+                    <p class="text-sm text-slate-300 uppercase tracking-[0.5em]">KẾT NỐI</p>      
+                    <h2 class="text-3xl font-semibold text-white">Mời liên hệ để trao đổi hợp tác</h2>      
+                    <p class="text-slate-200">Tiên sẵn sàng tham gia các dự án tư vấn chiến lược, hội thảo khoa học và chương trình phát triển sản phẩm mới.</p>      
+                    <div class="space-y-3 text-slate-300 text-sm">        
+                        <p>Email: <a href="mailto:trancamtien332000@gmail.com" class="text-pink-300">trancamtien332000@gmail.com</a></p>        
+                        <p>Điện thoại: <a href="tel:+84376321433" class="text-pink-300">(+84) 376 321 433</a></p>        
+                        <p>LinkedIn: <a href="https://www.linkedin.com/in/tranthicamtiencantho" target="_blank" class="text-pink-300">linkedin.com/in/tranthicamtiencantho (Ví dụ)</a></p>      
+                    </div>    
+                </div>    
+                <form class="space-y-4">      
+                    <div><label class="text-sm text-slate-300 block mb-2">Họ và tên</label><input type="text" class="w-full px-4 py-3 rounded-2xl bg-white/10 border border-white/20 text-white placeholder:text-slate-400 focus:outline-none focus:border-pink-400" placeholder="Tên của bạn"></div>      
+                    <div><label class="text-sm text-slate-300 block mb-2">Tổ chức</label><input type="text" class="w-full px-4 py-3 rounded-2xl bg-white/10 border border-white/20 text-white placeholder:text-slate-400 focus:outline-none focus:border-pink-400" placeholder="Công ty / Viện / Startup"></div>      
+                    <div><label class="text-sm text-slate-300 block mb-2">Nội dung</label><textarea rows="4" class="w-full px-4 py-3 rounded-2xl bg-white/10 border border-white/20 text-white placeholder:text-slate-400" placeholder="Chia sẻ nhu cầu hợp tác"></textarea></div>      
+                    <button type="button" id="sendBtn" class="w-full py-3 rounded-2xl bg-pink-500 hover:bg-pink-400 font-semibold tracking-wide">Gửi thông tin</button>      
+                    <p id="formMessage" class="text-sm text-center text-sky-300 hidden">Cảm ơn bạn! Tiên sẽ phản hồi trong thời gian sớm nhất.</p>    
+                </form>  
+            </section>
+        </main>
+        <footer class="relative z-10 max-w-6xl mx-auto px-6 pb-8 text-center text-xs text-slate-500">  
+            © <span id="year"></span> Trần Thị Cẩm Tiên. All rights reserved.
+        </footer>
+    </div>
+    <script> 
+        const btn = document.getElementById('sendBtn'); 
+        const message = document.getElementById('formMessage'); 
+        btn.addEventListener('click', () => { 
+            message.classList.remove('hidden'); 
+            message.classList.add('animate-pulse'); 
+            setTimeout(() => message.classList.remove('animate-pulse'), 2000); 
+        }); 
+        document.getElementById('year').textContent = new Date().getFullYear(); 
+    </script>
+</body> 
+</html>
